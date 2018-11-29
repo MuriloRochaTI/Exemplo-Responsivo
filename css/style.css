@@ -1,0 +1,140 @@
+/* ######### CSS PADRÃO(ESTÁTICO) ######### */
+body, header, footer{
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+    font-family: verdana;
+    font-size: 1.3em; /* UTILIZAR UNIDADE DE MEDIDA em */
+    
+    color: blueviolet;
+}
+
+/* Centralizar divs */
+.center_object{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ######### CSS VERSÃO DESKTOP ######### */
+
+@media screen and (min-width: 1000px)
+{
+    header{
+        width: 1400px;
+        height: 70px;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #menu_desktop{
+        width: inherit;
+        height: inherit;
+        
+    }
+    
+    #menu_mobile{
+        display: none;
+    }
+    
+    .itens{
+        width: 200px;
+        height: inherit;
+        float: left;
+        background-color: darkcyan;
+        margin-right: 10px;
+        color: darkseagreen;
+    }
+    
+    #conteudo{
+        width: 1400px;
+        height: auto;
+        min-height: 900px;
+        overflow: hidden; /* div crescer sozinha e não mostrar a barra de rolagem */
+        background-color: blueviolet;
+    }
+    
+    .caixa_conteudo{
+        width: inherit; /* Erda o tamanho da div pai. No caso a div #conteudo q tem 1400 de width; entao a caixa_conteudo ficará com a mesma largura */
+        height: auto;
+        min-height: 300px;
+        overflow: hidden;
+        background-color: darkblue;
+    }
+    
+    .imagem_conteudo{
+        width: 400px;
+        height: 300px;
+        background-color: steelblue;
+        float: left;
+    }
+    
+    .texto_conteudo{
+        width: 600px;
+        height: 300px;
+        background-color: dodgerblue;
+        float: left;
+    }
+    
+   
+    
+}
+
+
+/* ######### CSS VERSÃO MOBILE ######### */
+
+/* disposivito no max 680px; usa-se a propriedade device para testar no navegador a versao MOBILE */
+@media screen and (max-width: 680px){
+    
+    header{
+        width: 100%;
+        height: 50px;
+        background-color: red;
+    }
+    
+    #menu_desktop{
+        display: none; /* esconde o menu */
+    }
+    
+    #menu_mobile{
+        width: 50px;
+        height: 50px;
+        background-color: deepskyblue;
+        margin-left: 20px;
+        margin-top: 20px;
+        position: absolute;
+    }
+    
+    #conteudo{
+        width: 100%;
+        height: auto;
+        min-height: 900px;
+        overflow: hidden; /* div crescer sozinha e não mostrar a barra de rolagem */
+        background-color: blueviolet;
+    }
+    
+    .caixa_conteudo{
+        width: inherit; /* Erda o tamanho da div pai. No caso a div #conteudo q tem 1400 de width; entao a caixa_conteudo ficará com a mesma largura */
+        height: auto;
+        min-height: 300px;
+        overflow: hidden;
+        background-color: darkblue;
+    }
+    
+    .imagem_conteudo{
+        width: 400px;
+        height: 300px;
+        background-color: steelblue;
+        margin: auto;
+    }
+    
+    .texto_conteudo{
+        width: 600px;
+        height: 300px;
+        background-color: dodgerblue;
+        margin: auto;
+    }
+    
+}
+
